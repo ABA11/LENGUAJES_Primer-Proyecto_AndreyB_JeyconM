@@ -9,6 +9,8 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.EntityFrameworkCore;
+using LENGUAJES_Primer_Proyecto_AndreyBermdez_JeyconMorera.Models;
 
 namespace LENGUAJES_Primer_Proyecto_AndreyBermdez_JeyconMorera
 {
@@ -33,6 +35,9 @@ namespace LENGUAJES_Primer_Proyecto_AndreyBermdez_JeyconMorera
 
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+
+            services.AddDbContext<LENGUAJES_Primer_Proyecto_AndreyBermdez_JeyconMoreraContext>(options =>
+                    options.UseSqlServer(Configuration.GetConnectionString("LENGUAJES_Primer_Proyecto_AndreyBermdez_JeyconMoreraContext")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

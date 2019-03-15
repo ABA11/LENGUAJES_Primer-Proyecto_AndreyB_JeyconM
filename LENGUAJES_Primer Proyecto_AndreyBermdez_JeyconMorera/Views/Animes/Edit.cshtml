@@ -1,0 +1,84 @@
+﻿@model LENGUAJES_Primer_Proyecto_AndreyBermdez_JeyconMorera.Models.Anime
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Anime</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="Nombre" class="control-label"></label>
+                <input asp-for="Nombre" class="form-control" />
+                <span asp-validation-for="Nombre" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Foto" class="control-label"></label>
+                <input asp-for="Foto" class="form-control" />
+                <span asp-validation-for="Foto" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CEpisodios" class="control-label"></label>
+                <input asp-for="CEpisodios" class="form-control" />
+                <span asp-validation-for="CEpisodios" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Ranking" class="control-label"></label>
+                <input asp-for="Ranking" class="form-control" />
+                <span asp-validation-for="Ranking" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AñoEmision" class="control-label"></label>
+                <input asp-for="AñoEmision" class="form-control" />
+                <span asp-validation-for="AñoEmision" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AñoFinalizacion" class="control-label"></label>
+                <input asp-for="AñoFinalizacion" class="form-control" />
+                <span asp-validation-for="AñoFinalizacion" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Duracion" class="control-label"></label>
+                <input asp-for="Duracion" class="form-control" />
+                <span asp-validation-for="Duracion" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="EstDescarga" /> @Html.DisplayNameFor(model => model.EstDescarga)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="EstEmision" /> @Html.DisplayNameFor(model => model.EstEmision)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Estado" /> @Html.DisplayNameFor(model => model.Estado)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="TotalEpisodios" class="control-label"></label>
+                <input asp-for="TotalEpisodios" class="form-control" />
+                <span asp-validation-for="TotalEpisodios" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,95 @@
+﻿@model IEnumerable<LENGUAJES_Primer_Proyecto_AndreyBermdez_JeyconMorera.Models.Anime>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nombre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Foto)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CEpisodios)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ranking)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AñoEmision)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AñoFinalizacion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Duracion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EstDescarga)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EstEmision)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Estado)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TotalEpisodios)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Foto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CEpisodios)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ranking)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AñoEmision)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AñoFinalizacion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Duracion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EstDescarga)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EstEmision)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Estado)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TotalEpisodios)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

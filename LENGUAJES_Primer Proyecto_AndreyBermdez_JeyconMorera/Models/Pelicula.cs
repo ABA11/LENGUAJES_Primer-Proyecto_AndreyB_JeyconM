@@ -5,11 +5,11 @@ using System.Threading.Tasks;
 
 namespace LENGUAJES_Primer_Proyecto_AndreyBermdez_JeyconMorera.Models
 {
-    public class Class
+    public class Pelicula
     {
-        public DateTime año { get; set; }
-        public string nombre { get; set; }
-     
+        public int Id { get; set; }
+        public DateTime Año { get; set; }
+        public string Nombre { get; set; } 
         public int Duracion { get; set; }
     }
 }
