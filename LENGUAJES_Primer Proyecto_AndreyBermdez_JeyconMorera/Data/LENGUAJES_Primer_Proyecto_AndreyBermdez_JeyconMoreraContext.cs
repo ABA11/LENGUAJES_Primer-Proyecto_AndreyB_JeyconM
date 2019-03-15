@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
+using LENGUAJES_Primer_Proyecto_AndreyBermdez_JeyconMorera.Models;
 
 namespace LENGUAJES_Primer_Proyecto_AndreyBermdez_JeyconMorera.Models
 {
@@ -14,5 +15,11 @@ namespace LENGUAJES_Primer_Proyecto_AndreyBermdez_JeyconMorera.Models
         }
 
         public DbSet<LENGUAJES_Primer_Proyecto_AndreyBermdez_JeyconMorera.Models.Anime> Anime { get; set; }
+
+        public DbSet<LENGUAJES_Primer_Proyecto_AndreyBermdez_JeyconMorera.Models.Ova> Ova { get; set; }
+
+        public DbSet<LENGUAJES_Primer_Proyecto_AndreyBermdez_JeyconMorera.Models.Pelicula> Pelicula { get; set; }
+
+        public DbSet<LENGUAJES_Primer_Proyecto_AndreyBermdez_JeyconMorera.Models.Temporada> Temporada { get; set; }
     }
 }
