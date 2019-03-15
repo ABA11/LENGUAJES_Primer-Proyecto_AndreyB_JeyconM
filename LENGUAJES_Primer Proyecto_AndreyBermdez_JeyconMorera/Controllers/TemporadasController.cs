@@ -53,7 +53,7 @@ namespace LENGUAJES_Primer_Proyecto_AndreyBermdez_JeyconMorera.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Año,Nombre,Capitulos,Duracion")] Temporada temporada)
+        public async Task<IActionResult> Create([Bind("Id,CodigoTemporada,Año,Nombre,Capitulos,Duracion")] Temporada temporada)
         {
             if (ModelState.IsValid)
             {
@@ -85,7 +85,7 @@ namespace LENGUAJES_Primer_Proyecto_AndreyBermdez_JeyconMorera.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Año,Nombre,Capitulos,Duracion")] Temporada temporada)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,CodigoTemporada,Año,Nombre,Capitulos,Duracion")] Temporada temporada)
         {
             if (id != temporada.Id)
             {
