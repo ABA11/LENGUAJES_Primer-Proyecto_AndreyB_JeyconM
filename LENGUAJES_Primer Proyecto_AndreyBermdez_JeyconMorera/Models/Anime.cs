@@ -10,6 +10,7 @@ namespace LENGUAJES_Primer_Proyecto_AndreyBermdez_JeyconMorera.Models
     {
         public int Id { get; set; }
         public string Nombre { get; set; }
+        public string Clasificacion { get; set; }
         public byte[] Foto { get; set; }
         public int CEpisodios { get; set; }
         public string Ranking { get; set; }

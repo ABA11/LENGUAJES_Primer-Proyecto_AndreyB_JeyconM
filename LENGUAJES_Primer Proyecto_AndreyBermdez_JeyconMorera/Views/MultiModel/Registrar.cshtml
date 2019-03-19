@@ -1,0 +1,172 @@
+﻿@model LENGUAJES_Primer_Proyecto_AndreyBermdez_JeyconMorera.Models.MultiModel
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Anime</h4>
+<hr />
+<div class="row">
+    <div class="col-md-12">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div style="display:flex;">
+                <div class="form-group" style="height:10em;width:12em;">
+                    <label class="control-label" font-size: 14px;
+                           style="font-weight:600;padding: 15px 40px !important;text-align: center;height:10em;width:10em;border-color:black;
+                     border-width:2px;border-style:Solid;">@Html.LabelFor(model => model.Anime.Foto)</label>
+                    <input style="width: 0.1px;height: 0.1px;opacity: 0;overflow: hidden;" class="form-control" type="file" name="file" value="@Html.EditorFor(model => model.Anime.Foto)" />
+                    <span class="text-danger">@Html.ValidationMessageFor(model => model.Anime.Foto)</span>
+                </div>
+                <div style="margin-left:1em">
+                    <div class="form-group">
+                        <label class="control-label">@Html.LabelFor(model => model.Anime.Nombre)</label>
+                        @Html.EditorFor(model => model.Anime.Nombre, new { htmlAttributes = new { @class = "form-control" } })
+                        <span class="text-danger">@Html.ValidationMessageFor(model => model.Anime.Nombre)</span>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">@Html.LabelFor(model => model.Anime.Clasificacion)</label>
+                        @Html.EditorFor(model => model.Anime.Clasificacion, new { htmlAttributes = new { @class = "form-control" } })
+                        <span class="text-danger">@Html.ValidationMessageFor(model => model.Anime.Clasificacion)</span>
+                    </div>
+                </div>
+                <div style="margin-left:1em">
+                    <div class="form-group">
+                        <label class="control-label">@Html.LabelFor(model => model.Anime.CEpisodios)</label>
+                        @Html.EditorFor(model => model.Anime.CEpisodios, new { htmlAttributes = new { @class = "form-control" } })
+                        <span class="text-danger">@Html.ValidationMessageFor(model => model.Anime.CEpisodios)</span>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">@Html.LabelFor(model => model.Anime.Ranking)</label>
+                        @Html.EditorFor(model => model.Anime.Ranking, new { htmlAttributes = new { @class = "form-control" } })
+                        <span class="text-danger">@Html.ValidationMessageFor(model => model.Anime.Ranking)</span>
+                    </div>
+                </div>
+                <div style="margin-left:1em">
+                    <div class="form-group">
+                        <label class="control-label">@Html.LabelFor(model => model.Anime.AñoEmision)</label>
+                        @Html.EditorFor(model => model.Anime.AñoEmision, new { htmlAttributes = new { @class = "form-control" } })
+                        <span class="text-danger">@Html.ValidationMessageFor(model => model.Anime.Ranking)</span>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">@Html.LabelFor(model => model.Anime.AñoFinalizacion)</label>
+                        @Html.EditorFor(model => model.Anime.AñoFinalizacion, new { htmlAttributes = new { @class = "form-control" } })
+                        <span class="text-danger">@Html.ValidationMessageFor(model => model.Anime.Ranking)</span>
+                    </div>
+                </div>
+                <div style="margin-left:1em;">
+                    <div class="form-group">
+                        <label class="control-label">@Html.LabelFor(model => model.Anime.Duracion)</label>
+                        @Html.EditorFor(model => model.Anime.Duracion, new { htmlAttributes = new { @class = "form-control" } })
+                        <span class="text-danger">@Html.ValidationMessageFor(model => model.Anime.Ranking)</span>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">@Html.LabelFor(model => model.Anime.TotalEpisodios)</label>
+                        @Html.EditorFor(model => model.Anime.TotalEpisodios, new { htmlAttributes = new { @class = "form-control" } })
+                        <span class="text-danger">@Html.ValidationMessageFor(model => model.Anime.Ranking)</span>
+                    </div>
+                </div>
+
+            </div>
+            <div style="display:flex;">
+                <div style="margin-left:1em" class="form-group form-check">
+                    <label class="form-check-label">
+                        @Html.EditorFor(model => model.Anime.EstDescarga) @Html.DisplayNameFor(model => model.Anime.EstDescarga)
+                    </label>
+                </div>
+                <div style="margin-left:1em" class="form-group form-check">
+                    <label class="form-check-label">
+                        @Html.EditorFor(model => model.Anime.EstEmision) @Html.DisplayNameFor(model => model.Anime.EstEmision)
+                    </label>
+                </div>
+                <div style="margin-left:1em" class="form-group form-check">
+                    <label class="form-check-label">
+                        @Html.EditorFor(model => model.Anime.Estado) @Html.DisplayNameFor(model => model.Anime.Estado)
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+<h4>Temporada</h4>
+<hr />
+<div class="row">
+    <div class="col-md-8">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div style="display:flex">
+                <div class="form-group" style="margin-left:1em">
+                    <label class="control-label">@Html.LabelFor(model => model.Temporada.Nombre)</label>
+                    @Html.EditorFor(model => model.Temporada.Nombre, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Temporada.Nombre)
+                </div>
+                <div class="form-group" style="margin-left:1em">
+                    <label class="control-label">@Html.LabelFor(model => model.Temporada.Año)</label>
+                    @Html.EditorFor(model => model.Anime.AñoFinalizacion, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Pelicula.Año)
+                </div>
+
+                <div class="form-group" style="margin-left:1em">
+                    <label class="control-label">@Html.LabelFor(model => model.Pelicula.Duracion)</label>
+                    @Html.EditorFor(model => model.Anime.AñoFinalizacion, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Pelicula.Duracion)
+                </div>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+<h4>Pelicula</h4>
+<hr />
+<div class="row">
+    <div class="col-md-8">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div style="display:flex">
+                <div class="form-group" style="margin-left:1em">
+                    <label class="control-label">@Html.LabelFor(model => model.Pelicula.Nombre)</label>
+                    @Html.EditorFor(model => model.Pelicula.Nombre, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Pelicula.Nombre)
+                </div>
+                <div class="form-group" style="margin-left:1em">
+                    <label class="control-label">@Html.LabelFor(model => model.Pelicula.Año)</label>
+                    @Html.EditorFor(model => model.Anime.AñoFinalizacion, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Pelicula.Año)
+                </div>
+
+                <div class="form-group" style="margin-left:1em">
+                    <label class="control-label">@Html.LabelFor(model => model.Pelicula.Duracion)</label>
+                    @Html.EditorFor(model => model.Pelicula.Duracion, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Pelicula.Duracion)
+                </div>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
