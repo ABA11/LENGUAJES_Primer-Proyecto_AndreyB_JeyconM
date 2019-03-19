@@ -18,8 +18,8 @@ namespace LENGUAJES_Primer_Proyecto_AndreyBermdez_JeyconMorera.Models
         public DateTime AñoFinalizacion { get; set; }
         public int Duracion { get; set; }
         public bool EstDescarga { get; set; }
-        public bool EstEmision { get; set; }
-        public bool Estado { get; set; }
+        public string EstEmision { get; set; }
+        public string Estado { get; set; }
         public int TotalEpisodios { get; set; }
     }
 }

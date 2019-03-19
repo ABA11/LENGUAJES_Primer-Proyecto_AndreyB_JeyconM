@@ -8,6 +8,7 @@ namespace LENGUAJES_Primer_Proyecto_AndreyBermdez_JeyconMorera.Models
     public class Ova
     {
         public int Id { get; set; }
+        public string CodigoOva {get;set;}
         public DateTime Año { get; set; }
         public string Nombre { get; set; }
         public int Capitulos { get; set; }
